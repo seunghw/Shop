@@ -1,8 +1,9 @@
+// eslint-disable-next-line
 import logo from './logo.svg';
 import './App.css';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Container,Row,Col, Button } from 'react-bootstrap';
-//eslint-disable-next-line
+
 function App() {
   return (
     <div className="App">
