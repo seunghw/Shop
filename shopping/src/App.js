@@ -1,15 +1,21 @@
 // eslint-disable-next-line
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Container,Row,Col, Button } from 'react-bootstrap';
+import Data from './data.js';
 
 function App() {
+
+  let [places, setplaces] = useState(Data);
+
+
   return (
     <div className="App">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">머신사</a>
+    <a class="navbar-brand" href="#">Go-Trip</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,7 +50,7 @@ function App() {
   </div>
 </nav>
 
-    <Jumbotron className="background">
+    <Jumbotron className="background" width="100%">
       <h1>99% Season Off!</h1>
       <p>
         This is a simple hero unit, a simple jumbotron-style component for calling
@@ -57,27 +63,29 @@ function App() {
 
     <div className="container">
       <div className="row">
-      <div className="col-md-4">
-          <img src="http://codingapple1.github.io/shop/shoes1.jpg" width="100%"/>
-          <h4>상품명</h4>
-          <p>상품설명 & 가격</p>
-        </div>
-        <div className="col-md-4">
-          <img src="http://codingapple1.github.io/shop/shoes2.jpg" width="100%"/>
-          <h4>상품명</h4>
-          <p>상품설명 & 가격</p>
-        </div>
-        <div className="col-md-4">
-          <img src="http://codingapple1.github.io/shop/shoes3.jpg" width="100%"/>
-          <h4>상품명</h4>
-          <p>상품설명 & 가격</p>
-        </div>
+        {
+          places.map((a,i)=> {
+            return(
+              <Card places = {places[i]} />
+            )
+          })
+        }
       </div>
     </div>
 
-
     </div>
   );
+}
+
+
+function Card(props) {
+  return (
+    <div className="col-md-4">
+          <img src={props.places.img} width="100%"/>
+          <h4>{ props.places.title }</h4>
+          <p>{ props.places.content } & { props.places.price } </p>
+        </div>
+  )
 }
 
 export default App;
