@@ -5,6 +5,8 @@ import './App.css';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Container,Row,Col, Button } from 'react-bootstrap';
 import Data from './data.js';
+import { Link, Route, Switch } from 'react-router-dom';
+import Detail from './Detail.js';
 
 function App() {
 
@@ -22,10 +24,10 @@ function App() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" as={Link} to ="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" as={Link}to ="/Detail">Detail</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,8 +51,9 @@ function App() {
     </div>
   </div>
 </nav>
-
-    <Jumbotron className="background" width="100%">
+  <Switch>
+    <Route exact path="/"> 
+      <Jumbotron className="background" width="100%">
       <h1>99% Season Off!</h1>
       <p>
         This is a simple hero unit, a simple jumbotron-style component for calling
@@ -72,6 +75,11 @@ function App() {
         }
       </div>
     </div>
+    </Route>
+      <Route path="/detail/:id">
+        <Detail places = {places}/>
+      </Route>
+      </Switch>
 
     </div>
   );

@@ -1,0 +1,29 @@
+.my-alert {
+  background-color: #eeeeee;
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.my-alert-yellow {
+  @extend .my-alert;
+  background-color: #ffe591;
+}
+
+// @mixin 함수() {
+//   background: #eeeeee;
+//   padding: 15px;
+//   border-radius: 5px;
+//   max-width: 500px;
+//   width: 100%;
+//   margin: auto;
+// }
+// .my-alert {
+//   @include 함수();
+// }
+
+// .my-alert p {
+//   margin-bottom: 0;
+// }
