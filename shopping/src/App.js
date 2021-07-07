@@ -7,10 +7,14 @@ import { Container,Row,Col, Button } from 'react-bootstrap';
 import Data from './data.js';
 import { Link, Route, Switch } from 'react-router-dom';
 import Detail from './Detail.js';
+import axios from 'axios'
+
 
 function App() {
 
   let [places, setplaces] = useState(Data);
+
+  let [재고, 재고변경] = useState([10,11,12]);
 
 
   return (
@@ -77,10 +81,21 @@ function App() {
     </div>
     </Route>
       <Route path="/detail/:id">
-        <Detail places = {places}/>
+        <Detail places = {places} 재고={재고} 재고변경={재고변경} />
       </Route>
       </Switch>
 
+      <Button variant="primary" onClick={()=>{ 
+        axios.get('https://codingapple1.github.io/shop/data2.json')
+        .then((result)=>{
+          console.log("성공")
+          setplaces([...places, ...result.data]);
+        })
+        .catch(()=>{
+          console.log("실패")
+        })
+       }}>더보기</Button>
+        
     </div>
   );
 }
