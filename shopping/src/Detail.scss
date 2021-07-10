@@ -12,6 +12,14 @@
   background-color: #ffe591;
 }
 
+.wow-enter {
+  opacity: 0;
+}
+
+.wow-enter-active {
+  opacity: 1;
+  transition: all 500ms;
+}
 // @mixin 함수() {
 //   background: #eeeeee;
 //   padding: 15px;
