@@ -15,6 +15,7 @@ import Data from "./data.js";
 import { Link, Route, Switch } from "react-router-dom";
 import Detail from "./Detail.js";
 import axios from "axios";
+import Cart from "./Cart.js";
 
 function App() {
   let [places, setplaces] = useState(Data);
@@ -94,6 +95,10 @@ function App() {
         </Route>
         <Route path="/detail/:id">
           <Detail places={places} 재고={재고} 재고변경={재고변경} />
+        </Route>
+
+        <Route path="/cart">
+          <Cart></Cart>
         </Route>
       </Switch>
     </div>
