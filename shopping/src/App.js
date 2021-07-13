@@ -12,7 +12,7 @@ import {
   Button,
 } from "react-bootstrap";
 import Data from "./data.js";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Switch, useHistory } from "react-router-dom";
 import Detail from "./Detail.js";
 import axios from "axios";
 import Cart from "./Cart.js";
@@ -71,7 +71,7 @@ function App() {
           <div className="container">
             <div className="row">
               {places.map((a, i) => {
-                return <Card places={places[i]} />;
+                return <Card places={places[i]} i={i} key={i} />;
               })}
             </div>
           </div>
@@ -106,8 +106,14 @@ function App() {
 }
 
 function Card(props) {
+  let history = useHistory();
   return (
-    <div className="col-md-4">
+    <div
+      className="col-md-4"
+      onClick={() => {
+        history.push("/detail/" + props.places.id);
+      }}
+    >
       <img src={props.places.img} width="100%" />
       <h4>{props.places.title}</h4>
       <p>

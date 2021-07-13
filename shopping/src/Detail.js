@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import "./Detail.scss";
 import { CSSTransition } from "react-transition-group";
+import { connect } from "react-redux";
 
 function Detail(props) {
   let history = useHistory();
@@ -31,22 +32,28 @@ function Detail(props) {
       {onoff === true ? <Noti /> : null}
       <div className="row">
         <div className="col-md-6">
-          <img
-            src="https://codingapple1.github.io/shop/shoes1.jpg"
-            width="100%"
-          />
+          <img src={찾은상품.img} width="100%" />
         </div>
         <div className="col-md-6 mt-4">
           <h4 className="pt-5">{찾은상품.title}</h4>
           <p>{찾은상품.content}</p>
           <p>{찾은상품.price}</p>
-
           <Info 재고={props.재고}></Info>
           <button
             className="btn btn-danger"
             onClick={() => {
               {
                 props.재고변경([9, 10, 11]);
+                props.dispatch({
+                  type: "항목추가",
+                  payload: {
+                    id: 찾은상품.id,
+                    name: 찾은상품.title,
+                    num: 1,
+                    price: 찾은상품.price,
+                  },
+                });
+                history.push("/cart");
               }
             }}
           >
@@ -133,4 +140,12 @@ function Info(props) {
   return <p>재고 : {props.재고[0]}</p>;
 }
 
-export default Detail;
+function reduxpractice(state) {
+  console.log(state);
+  return {
+    state: state.reducer,
+    alertcheck: state.reducer2,
+  };
+}
+
+export default connect(reduxpractice)(Detail);

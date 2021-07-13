@@ -29,17 +29,17 @@ function Cart(props) {
                   <td>
                     <button
                       onClick={() => {
-                        props.dispatch({ type: "수량증가" });
+                        props.dispatch({ type: "수량증가", payload: a.id });
                       }}
                     >
-                      증가
+                      +
                     </button>
                     <button
                       onClick={() => {
-                        props.dispatch({ type: "수량감소" });
+                        props.dispatch({ type: "수량감소", payload: a.id });
                       }}
                     >
-                      감소
+                      -
                     </button>
                   </td>
                 </tr>
@@ -47,6 +47,18 @@ function Cart(props) {
             })}
           </tbody>
         </Table>
+        {props.alertcheck === true ? (
+          <div className="my-alert-yellow">
+            <p>지금 구매하면 20%할인</p>
+            <button
+              onClick={() => {
+                props.dispatch({ type: "알림창닫기" });
+              }}
+            >
+              닫기
+            </button>
+          </div>
+        ) : null}
       </div>
     </div>
   );
@@ -54,7 +66,8 @@ function Cart(props) {
 
 function reduxpractice(state) {
   return {
-    state: state,
+    state: state.reducer,
+    alertcheck: state.reducer2,
   };
 }
 

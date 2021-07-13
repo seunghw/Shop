@@ -6,7 +6,14 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
+
+function reducer2(state = true, action) {
+  if (action.type === "알림창닫기") {
+    state = false;
+  }
+  return state;
+}
 
 let basestore = [
   {
@@ -35,22 +42,37 @@ let basestore = [
 ];
 
 function reducer(state = basestore, action) {
-  if (action.type === "수량증가") {
+  if (action.type === "항목추가") {
+    let found = state.findIndex((a) => {
+      return a.id === action.payload.id;
+    });
+
+    if (found >= 0) {
+      let copy = [...state];
+      copy[found].num++;
+      return copy;
+    } else {
+      let copy = [...state];
+      copy.push(action.payload);
+
+      return copy;
+    }
+  } else if (action.type === "수량증가") {
     let copy = [...state];
-    copy[0].num++;
+    copy[action.payload].num++;
     return copy;
   } else if (action.type === "수량감소") {
     let copy = [...state];
-    copy[0].num--;
+    copy[action.payload].num--;
 
-    if (copy[0].num < 0) copy[0].num = 0;
+    if (copy[action.payload].num < 0) copy[action.payload].num = 0;
 
     return copy;
   }
   return state;
 }
 
-let store = createStore(reducer);
+let store = createStore(combineReducers({ reducer, reducer2 }));
 
 ReactDOM.render(
   <React.StrictMode>
