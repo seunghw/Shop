@@ -32,7 +32,7 @@ function Detail(props) {
       {onoff === true ? <Noti /> : null}
       <div className="row">
         <div className="col-md-6">
-          <img src={찾은상품.img} width="100%" />
+          <img src={"/" + 찾은상품.img} width="100%" />
         </div>
         <div className="col-md-6 mt-4">
           <h4 className="pt-5">{찾은상품.title}</h4>

@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import {
@@ -34,8 +34,11 @@ function App() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/detail/1">
+            <Nav.Link as={Link} to="/detail/0">
               Detail
+            </Nav.Link>
+            <Nav.Link as={Link} to="/cart">
+              Cart
             </Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -98,7 +101,7 @@ function App() {
         </Route>
 
         <Route path="/cart">
-          <Cart></Cart>
+          <Cart places={places}></Cart>
         </Route>
       </Switch>
     </div>

@@ -19,7 +19,7 @@ let basestore = [
   {
     id: 0,
     name: "로마패키지",
-    num: 7,
+    num: 1,
     date: "2021년 8월 29일",
     price: 190000,
   },
@@ -27,7 +27,7 @@ let basestore = [
   {
     id: 1,
     name: "피렌체패키지",
-    num: 5,
+    num: 1,
     date: "2021년 10월 16일",
     price: 130000,
   },
@@ -35,7 +35,7 @@ let basestore = [
   {
     id: 2,
     name: "스위스패키지",
-    num: 3,
+    num: 1,
     date: "2021년 12월 19일",
     price: 250000,
   },

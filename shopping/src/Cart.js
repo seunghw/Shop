@@ -47,7 +47,7 @@ function Cart(props) {
             })}
           </tbody>
         </Table>
-        {props.alertcheck === true ? (
+        {props.alertcheck === true && (
           <div className="my-alert-yellow">
             <p>지금 구매하면 20%할인</p>
             <button
@@ -58,7 +58,7 @@ function Cart(props) {
               닫기
             </button>
           </div>
-        ) : null}
+        )}
       </div>
     </div>
   );
