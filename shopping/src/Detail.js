@@ -14,9 +14,14 @@ function Detail(props) {
 
   let [onoff, setonoff] = useState(true);
 
-  let [tap, settap] = useState(0);
-
   let [스위치, 스위치변경] = useState(false);
+
+  let [탭UI, 탭UI변경] = useState({
+    info: <p>상품정보는 이쪽입니다.</p>,
+    shipping: <p>배송관련은 이쪽이고요</p>,
+    refund: <p>환불약관 또한 이쪽입니다.</p>,
+  });
+  let [현재상태, 현재상태변경] = useState("info");
 
   useEffect(() => {
     let timer = setTimeout(() => {
@@ -36,14 +41,16 @@ function Detail(props) {
         </div>
         <div className="col-md-6 mt-4">
           <h4 className="pt-5">{찾은상품.title}</h4>
-          <p>{찾은상품.content}</p>
-          <p>{찾은상품.price}</p>
+          <p>contents : {찾은상품.content}</p>
+          <p>price : {찾은상품.price}</p>
+          <p>date : {찾은상품.date}</p>
+
           <Info 재고={props.재고}></Info>
           <button
             className="btn btn-danger"
             onClick={() => {
               {
-                props.재고변경([9, 10, 11]);
+                props.재고변경([(9, 10, 11)]);
                 props.dispatch({
                   type: "항목추가",
                   payload: {
@@ -75,8 +82,8 @@ function Detail(props) {
           <Nav.Link
             eventKey="link-0"
             onClick={() => {
-              settap(0);
               스위치변경(false);
+              현재상태변경("info");
             }}
           >
             Active
@@ -86,8 +93,8 @@ function Detail(props) {
           <Nav.Link
             eventKey="link-1"
             onClick={() => {
-              settap(1);
               스위치변경(false);
+              현재상태변경("shipping");
             }}
           >
             Option 1
@@ -97,8 +104,8 @@ function Detail(props) {
           <Nav.Link
             eventKey="link-2"
             onClick={() => {
-              settap(2);
               스위치변경(false);
+              현재상태변경("refund");
             }}
           >
             Option 2
@@ -110,8 +117,8 @@ function Detail(props) {
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      <CSSTransition in={스위치} classNames="wow" timeout={500}>
-        <TabContent tap={tap} 스위치변경={스위치변경} />
+      <CSSTransition in={스위치} classNames="wow" timeout={1000}>
+        <TabContent 스위치변경={스위치변경} 탭UI={탭UI} 현재상태={현재상태} />
       </CSSTransition>
     </div>
   );
@@ -121,13 +128,8 @@ function TabContent(props) {
   useEffect(() => {
     props.스위치변경(true); //탭내용 컴포넌트가 로드될 때 true
   });
-  if (props.tap === 0) {
-    return <div>내용 0</div>;
-  } else if (props.tap === 1) {
-    return <div>내용 1</div>;
-  } else if (props.tap === 2) {
-    return <div>내용 2</div>;
-  }
+
+  return <div>{props.탭UI[props.현재상태]}</div>;
 }
 
 function Noti() {

@@ -9,7 +9,28 @@
 
 .my-alert-yellow {
   @extend .my-alert;
-  background-color: #ffe591;
+  background-color: #fcf0c8;
+}
+
+.pay {
+  background-color: #e2e2e2;
+  padding: 15px;
+  padding-top: 30px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.pay h5 {
+  font-weight: bold;
+}
+
+.paycount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay span {
+  padding: 10px;
 }
 
 .wow-enter {

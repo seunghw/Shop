@@ -61,10 +61,10 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Jumbotron className="background" width="100%">
-            <h1>99% Season Off!</h1>
+            <h1>Explore Best in Travel 2021</h1>
             <p>
-              This is a simple hero unit, a simple jumbotron-style component for
-              calling extra attention to featured content or information.
+              The world is a book and those who do not travel read only one
+              page.
             </p>
             <p>
               <Button variant="primary">Learn more</Button>
@@ -120,7 +120,9 @@ function Card(props) {
       <img src={props.places.img} width="100%" />
       <h4>{props.places.title}</h4>
       <p>
-        {props.places.content} & {props.places.price}{" "}
+        {props.places.content}
+        <br />
+        출발일 : {props.places.date}
       </p>
     </div>
   );
