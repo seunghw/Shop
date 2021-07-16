@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Badge } from "react-bootstrap";
 import { connect } from "react-redux";
 
 function Cart(props) {
-  let [count, setcount] = useState(3);
-  let [total, settotal] = useState(0);
-
+  let 할인액 = 100000;
   return (
     <div>
       <div>
@@ -63,20 +61,26 @@ function Cart(props) {
             })}
           </tbody>
         </Table>
+
         <div className="pay">
           <h5> 장바구니 합계</h5>
           <hr size="15" color="black"></hr>
           <div className="paycount">
             <span>선택 상품 개수 </span>
-            <span>{count}개</span>
+            <span>{props.productcount}개</span>
           </div>
           <div className="paycount">
-            <span>상품 금액 </span>
-            <span>원</span>
+            <span>상품 금액</span>
+            <span>{props.total}원</span>
           </div>
           <div className="paycount">
-            <span>할인 금액 </span>
-            <span>원</span>
+            <span>할인 금액 (프로모션 10% 할인) </span>
+            <span>{할인액}원</span>
+          </div>
+          <hr color="black"></hr>
+          <div className="paycount">
+            <span>결제 금액 </span>
+            <span>{props.total - 할인액}원</span>
           </div>
         </div>
         <div className="d-grid gap-2">
@@ -93,6 +97,8 @@ function reduxpractice(state) {
   return {
     state: state.reducer,
     alertcheck: state.reducer2,
+    productcount: state.reducer3,
+    total: state.reducer4,
   };
 }
 

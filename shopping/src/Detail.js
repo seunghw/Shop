@@ -50,7 +50,14 @@ function Detail(props) {
             className="btn btn-danger"
             onClick={() => {
               {
-                props.재고변경([(9, 10, 11)]);
+                props.dispatch({
+                  type: "상품개수추가",
+                });
+                props.dispatch({
+                  type: "상품합계",
+                  payload: 찾은상품.price,
+                });
+                props.재고변경(props.재고 - 1);
                 props.dispatch({
                   type: "항목추가",
                   payload: {
@@ -139,7 +146,7 @@ function Noti() {
 }
 
 function Info(props) {
-  return <p>재고 : {props.재고[0]}</p>;
+  return <p>재고 : {props.재고}</p>;
 }
 
 function reduxpractice(state) {
@@ -147,6 +154,7 @@ function reduxpractice(state) {
   return {
     state: state.reducer,
     alertcheck: state.reducer2,
+    productcount: state.reducer3,
   };
 }
 

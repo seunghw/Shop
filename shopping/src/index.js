@@ -15,6 +15,20 @@ function reducer2(state = true, action) {
   return state;
 }
 
+function reducer3(state = 3, action) {
+  if (action.type === "상품개수추가") {
+    state++;
+  }
+  return state;
+}
+
+function reducer4(state = 570000, action) {
+  if (action.type === "상품합계") {
+    state = state + action.payload;
+  }
+  return state;
+}
+
 let basestore = [
   {
     id: 0,
@@ -72,7 +86,9 @@ function reducer(state = basestore, action) {
   return state;
 }
 
-let store = createStore(combineReducers({ reducer, reducer2 }));
+let store = createStore(
+  combineReducers({ reducer, reducer2, reducer3, reducer4 })
+);
 
 ReactDOM.render(
   <React.StrictMode>

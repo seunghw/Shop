@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import Jumbotron from "react-bootstrap/Jumbotron";
@@ -13,14 +13,17 @@ import {
 } from "react-bootstrap";
 import Data from "./data.js";
 import { Link, Route, Switch, useHistory } from "react-router-dom";
-import Detail from "./Detail.js";
+
 import axios from "axios";
 import Cart from "./Cart.js";
+// import Detail from "./Detail.js";
+let Detail = lazy(() => import("./Detail.js"));
 
 function App() {
   let [places, setplaces] = useState(Data);
 
-  let [재고, 재고변경] = useState([10, 11, 12]);
+  let [재고, 재고변경] = useState(10);
+  let [total, settotal] = useState(570000);
 
   return (
     <div className="App">
@@ -97,7 +100,9 @@ function App() {
           </Button>
         </Route>
         <Route path="/detail/:id">
-          <Detail places={places} 재고={재고} 재고변경={재고변경} />
+          <Suspense fallback={<div>로딩중입니다.</div>}>
+            <Detail places={places} 재고={재고} 재고변경={재고변경} />
+          </Suspense>
         </Route>
 
         <Route path="/cart">
