@@ -70,7 +70,7 @@ function App() {
               page.
             </p>
             <p>
-              <Button variant="primary">Learn more</Button>
+              <Button variant="primary">More</Button>
             </p>
           </Jumbotron>
 
@@ -86,7 +86,7 @@ function App() {
             variant="primary"
             onClick={() => {
               axios
-                .get("https://codingapple1.github.io/shop/data2.json")
+                .get("https://raw.githubusercontent.com/seunghw/Shop/main/more.json")
                 .then((result) => {
                   console.log("성공");
                   setplaces([...places, ...result.data]);
