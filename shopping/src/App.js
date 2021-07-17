@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <Navbar bg="light" expand="lg">
         <Navbar.Brand as={Link} to="/">
           Go-Trip

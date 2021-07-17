@@ -22,7 +22,7 @@ export default [
   {
     id: 2,
     title: "Switzerland",
-    content: "Mountain liki",
+    content: "Blausee",
     price: 230000,
     img: "img/Switzerland2.jpg",
     num: 0,

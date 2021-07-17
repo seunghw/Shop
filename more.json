@@ -1,77 +1,77 @@
 [
     {
       "id" : 6,
-      "title" : "정말",
-      "content" : "Florence",
-      "price" : 77000,
-      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_1.jpg",
+      "title" : "Switzerland",
+      "content" : "Matterhorn - Symbol for Switzerland",
+      "price" : 277000,
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_4.JPG",
       "num": 0,
       "date"  : "2023년 7월 20일"
     },
     {
       "id" : 7,
-      "title" : "예쁘지 않나요",
-      "content" : "only 5 inches",
+      "title" : "Florence",
+      "content" : "Piazelle Michelangelo",
       "price" : 90000,
-      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_2.jpg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_2.JPG",
       "num": 0,
       "date"  : "2023년 4월 10일"
     },
     {
       "id" : 8,
-      "title" : "아 사진들은",
-      "content" : "only 5 inches",
+      "title" : "Strasbourg",
+      "content" : "Colmar",
       "price" : 110000,
-      "img": "./img/IMG3.jpg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_10.jpg",
       "num": 0,
       "date"  : "2023년 8월 23일"
     },
     {
       "id" : 9,
-      "title" : "제가 여행에서",
-      "content" : "only 5 inches",
+      "title" : "France",
+      "content" : "Eiffel Tower",
       "price" : 260000,
-      "img": "/img/IMG4.jpg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_6.JPG",
       "num": 0,
       "date"  : "2023년 11월 2일"
     },
     {
       "id" : 10,
-      "title" : "직접 찍었던",
-      "content" : "only 5 inches",
-      "img": "img/IMG5.jpg",
+      "title" : "Rome",
+      "content" : "Castel Santa Angelo",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_9.JPG",
       "price" : 231000,
       "date"  : "2023년 2월 12일"
     },
     {
       "id" : 11,
-      "title" : "사진들입니다.",
-      "content" : "only 5 inches",
-      "img": "img/IMG6.jpg",
+      "title" : "Strasbourg",
+      "content" : "Cathédrale Notre Dame de Strasbourg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/Strasbourg.JPG",
       "price" : 132000,
       "date"  : "2023년 1월 17일"
     },
     {
       "id" : 12,
-      "title" : "마음껏",
-      "content" : "only 5 inches",
-      "img": "img/IMG7.jpg",
+      "title" : "Nice",
+      "content" : "Nice beach",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_11.JPG",
       "price" : 190000,
       "date"  : "2023년 4월 19일"
     },
     {
       "id" : 13,
-      "title" : "즐기시길",
-      "content" : "only 5 inches",
-      "img": "img/IMG8.jpg",
+      "title" : "Rome",
+      "content" : "Wedding snap",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_8.JPG",
       "price" : 180000,
       "date"  : "2023년 6월 5일"
     },
     {
       "id" : 14,
-      "title" : "바랍니다",
-      "content" : "only 5 inches",
-      "img": "img/IMG9.jpg",
+      "title" : "Switzerland",
+      "content" : "Mountain liki",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_0.JPG",
       "price" : 160000,
       "date"  : "2023년 7월 7일"
     }
