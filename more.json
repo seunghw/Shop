@@ -1,20 +1,74 @@
 [
     {
-      "id" : 3,
-      "title" : "승화니야",
+      "id" : 6,
+      "title" : "정말",
+      "content" : "Florence",
+      "img": "img/IMG1.jpg",
+      "price" : 77000,
+      "date"  : "2023년 7월 20일"
+    },
+    {
+      "id" : 7,
+      "title" : "예쁘지 않나요",
       "content" : "only 5 inches",
-      "price" : 120000
+      "img": "img/IMG2.jpg",
+      "price" : 90000,
+      "date"  : "2023년 4월 10일"
     },
     {
-      "id" : 4,
-      "title" : "화니야",
-      "content" : "for less than 6",
-      "price" : 120000
+      "id" : 8,
+      "title" : "아 사진들은",
+      "content" : "only 5 inches",
+      "img": "img/IMG3.jpg",
+      "price" : 110000,
+      "date"  : "2023년 8월 23일"
     },
     {
-      "id" : 5,
-      "title" : "니야",
-      "content" : "Born in France",
-      "price" : 120000
+      "id" : 9,
+      "title" : "제가 여행에서",
+      "content" : "only 5 inches",
+      "img": "img/IMG4.jpg",
+      "price" : 260000,
+      "date"  : "2023년 11월 2일"
+    },
+    {
+      "id" : 10,
+      "title" : "직접 찍었던",
+      "content" : "only 5 inches",
+      "img": "img/IMG5.jpg",
+      "price" : 231000,
+      "date"  : "2023년 2월 12일"
+    },
+    {
+      "id" : 11,
+      "title" : "사진들입니다.",
+      "content" : "only 5 inches",
+      "img": "img/IMG6.jpg",
+      "price" : 132000,
+      "date"  : "2023년 1월 17일"
+    },
+    {
+      "id" : 12,
+      "title" : "마음껏",
+      "content" : "only 5 inches",
+      "img": "img/IMG7.jpg",
+      "price" : 190000,
+      "date"  : "2023년 4월 19일"
+    },
+    {
+      "id" : 13,
+      "title" : "즐기시길",
+      "content" : "only 5 inches",
+      "img": "img/IMG8.jpg",
+      "price" : 180000,
+      "date"  : "2023년 6월 5일"
+    },
+    {
+      "id" : 14,
+      "title" : "바랍니다",
+      "content" : "only 5 inches",
+      "img": "img/IMG9.jpg",
+      "price" : 160000,
+      "date"  : "2023년 7월 7일"
     }
   ]
