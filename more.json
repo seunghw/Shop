@@ -11,9 +11,9 @@
     {
       "id" : 7,
       "title" : "Florence",
-      "content" : "Piazelle Michelangelo",
+      "content" : "Duomo, Santa Maria del Fiore",
       "price" : 90000,
-      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_2.JPG",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_3.JPG",
       "num": 0,
       "date"  : "2023년 4월 10일"
     },
@@ -37,9 +37,9 @@
     },
     {
       "id" : 10,
-      "title" : "Rome",
-      "content" : "Castel Santa Angelo",
-      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_9.JPG",
+      "title" : "France",
+      "content" : "Place des Halles",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_12.JPG",
       "price" : 231000,
       "date"  : "2023년 2월 12일"
     },
@@ -69,9 +69,9 @@
     },
     {
       "id" : 14,
-      "title" : "Switzerland",
-      "content" : "Mountain liki",
-      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_0.JPG",
+      "title" : "Rome",
+      "content" : "Castel Santa Angelo",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_9.JPG",
       "price" : 160000,
       "date"  : "2023년 7월 7일"
     }
