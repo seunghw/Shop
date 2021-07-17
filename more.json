@@ -4,7 +4,7 @@
       "title" : "정말",
       "content" : "Florence",
       "price" : 77000,
-      "img": "img/IMG1.jpg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_1.jpg",
       "num": 0,
       "date"  : "2023년 7월 20일"
     },
@@ -13,7 +13,7 @@
       "title" : "예쁘지 않나요",
       "content" : "only 5 inches",
       "price" : 90000,
-      "img": "img/IMG2.jpg",
+      "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_2.jpg",
       "num": 0,
       "date"  : "2023년 4월 10일"
     },
