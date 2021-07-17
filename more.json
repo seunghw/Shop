@@ -3,32 +3,36 @@
       "id" : 6,
       "title" : "정말",
       "content" : "Florence",
-      "img": "img/IMG1.jpg",
       "price" : 77000,
+      "img": "img/IMG1.jpg",
+      "num": 0,
       "date"  : "2023년 7월 20일"
     },
     {
       "id" : 7,
       "title" : "예쁘지 않나요",
       "content" : "only 5 inches",
-      "img": "img/IMG2.jpg",
       "price" : 90000,
+      "img": "img/IMG2.jpg",
+      "num": 0,
       "date"  : "2023년 4월 10일"
     },
     {
       "id" : 8,
       "title" : "아 사진들은",
       "content" : "only 5 inches",
-      "img": "img/IMG3.jpg",
       "price" : 110000,
+      "img": "./img/IMG3.jpg",
+      "num": 0,
       "date"  : "2023년 8월 23일"
     },
     {
       "id" : 9,
       "title" : "제가 여행에서",
       "content" : "only 5 inches",
-      "img": "img/IMG4.jpg",
       "price" : 260000,
+      "img": "/img/IMG4.jpg",
+      "num": 0,
       "date"  : "2023년 11월 2일"
     },
     {
