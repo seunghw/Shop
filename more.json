@@ -5,6 +5,7 @@
       "content" : "Wedding snap",
       "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_8.JPG",
       "price" : 180000,
+      "num" : 0,
       "date"  : "2023년 6월 5일"
     },
     {
@@ -50,6 +51,7 @@
       "content" : "Castel Santa Angelo",
       "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_9.JPG",
       "price" : 160000,
+      "num" : 0,
       "date"  : "2023년 7월 7일"
     },
     {
@@ -67,6 +69,7 @@
       "content" : "Cathédrale Notre Dame de Strasbourg",
       "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/Strasbourg.JPG",
       "price" : 132000,
+      "num" : 0,
       "date"  : "2023년 1월 17일"
     },
     {
@@ -75,6 +78,7 @@
       "content" : "Place des Halles",
       "img": "https://raw.githubusercontent.com/seunghw/Shop/main/shopping/public/img/IMG_12.JPG",
       "price" : 231000,
+      "num" : 0,
       "date"  : "2023년 2월 12일"
       
     }
