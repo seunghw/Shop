@@ -24,6 +24,17 @@ function Detail(props) {
   let [현재상태, 현재상태변경] = useState("info");
 
   useEffect(() => {
+
+    let arr = localStorage.getItem('watched');
+    if( arr == null ) { arr = [] } else { arr = JSON.parse(arr); }
+
+    arr.push(id);
+    arr = new Set(arr);
+    arr = [...arr];
+
+    localStorage.setItem('watched', JSON.stringify(arr));
+
+
     let timer = setTimeout(() => {
       setonoff(false);
     }, 2000);
@@ -37,7 +48,7 @@ function Detail(props) {
       {onoff === true ? <Noti /> : null}
       <div className="row">
         <div className="col-md-6">
-          <img src={"/" + 찾은상품.img} width="100%" />
+          <img src={찾은상품.img} width="100%" />
         </div>
         <div className="col-md-6 mt-4">
           <h4 className="pt-5">{찾은상품.title}</h4>
@@ -62,9 +73,11 @@ function Detail(props) {
                   type: "항목추가",
                   payload: {
                     id: 찾은상품.id,
+                    content: 찾은상품.content,
                     name: 찾은상품.title,
-                    num: 1,
+                    num: 찾은상품.num,
                     price: 찾은상품.price,
+                    date: 찾은상품.date,
                   },
                 });
                 history.push("/cart");

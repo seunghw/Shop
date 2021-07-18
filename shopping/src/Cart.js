@@ -34,9 +34,9 @@ function Cart(props) {
             {props.state.map((a, i) => {
               return (
                 <tr key={i}>
-                  <td>{a.id}</td>
-                  <td>{a.name} </td>
-                  <td>{a.num}</td>
+                  <td>{i+1}</td>
+                  <td>{a.content} </td>
+                  <td>{a.num+1}</td>
                   <td>{a.date}</td>
                   <td>{a.price}</td>
                   <td>

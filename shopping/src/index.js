@@ -33,7 +33,8 @@ let basestore = [
   {
     id: 0,
     name: "로마패키지",
-    num: 1,
+    num: 0,
+    content: "colosseum",
     date: "2021년 8월 29일",
     price: 190000,
   },
@@ -41,7 +42,8 @@ let basestore = [
   {
     id: 1,
     name: "피렌체패키지",
-    num: 1,
+    content: "Cattedrale di Santa Maria del Fiore",
+    num: 0,
     date: "2021년 10월 16일",
     price: 130000,
   },
@@ -49,7 +51,8 @@ let basestore = [
   {
     id: 2,
     name: "스위스패키지",
-    num: 1,
+    num: 0,
+    content: "Blausee",
     date: "2021년 12월 19일",
     price: 250000,
   },
