@@ -17,9 +17,9 @@ function Detail(props) {
   let [스위치, 스위치변경] = useState(false);
 
   let [탭UI, 탭UI변경] = useState({
-    info: <p>상품정보는 이쪽입니다.</p>,
-    shipping: <p>배송관련은 이쪽이고요</p>,
-    refund: <p>환불약관 또한 이쪽입니다.</p>,
+    info: <p><br/>상품정보는 준비중입니다.</p>,
+    shipping: <p><br/>배송관련도 준비중입니다.</p>,
+    refund: <p><br/>환불약관 또한 준비중입니다.</p>,
   });
   let [현재상태, 현재상태변경] = useState("info");
 
@@ -58,7 +58,7 @@ function Detail(props) {
 
           <Info 재고={props.재고}></Info>
           <button
-            className="btn btn-danger"
+            className="btn mr-2 btn-danger"
             onClick={() => {
               {
                 props.dispatch({
@@ -97,9 +97,9 @@ function Detail(props) {
         </div>
       </div>
 
-      <Nav variant="tabs" defaultActiveKey="link-0">
+      <Nav className="mt-3"variant="tabs" defaultActiveKey="link-0">
         <Nav.Item>
-          <Nav.Link
+          <Nav.Link 
             eventKey="link-0"
             onClick={() => {
               스위치변경(false);
@@ -138,7 +138,7 @@ function Detail(props) {
         </Nav.Item>
       </Nav>
       <CSSTransition in={스위치} classNames="wow" timeout={1000}>
-        <TabContent 스위치변경={스위치변경} 탭UI={탭UI} 현재상태={현재상태} />
+        <TabContent  스위치변경={스위치변경} 탭UI={탭UI} 현재상태={현재상태} />
       </CSSTransition>
     </div>
   );

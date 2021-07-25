@@ -83,8 +83,8 @@ function Cart(props) {
             <span>{props.total - 할인액}원</span>
           </div>
         </div>
-        <div className="d-grid gap-2">
-          <Button variant="primary" size="lg">
+        <div className="d-grid gap-2 pt-2 pb-3">
+          <Button variant="primary" size="lg" onClick={()=>{alert("결제되었습니다.")}}>
             결제하기
           </Button>
         </div>

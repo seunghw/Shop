@@ -24,10 +24,6 @@
   font-weight: bold;
 }
 
-.more {
-  margin-bottom: 20px;
-}
-
 .paycount {
   display: flex;
   justify-content: space-between;
@@ -44,6 +40,10 @@
 .wow-enter-active {
   opacity: 1;
   transition: all 500ms;
+}
+
+.btn btn-danger {
+  padding-left: 10px;
 }
 // @mixin 함수() {
 //   background: #eeeeee;
