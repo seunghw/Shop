@@ -13,6 +13,7 @@
 
 - React
 - Redux
+- axios
 - JSX
 - Bootstrap
 - SASS
